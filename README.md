@@ -1,7 +1,7 @@
 # Simple-Calculator
 This game is built with Java GUI.
 
-![ScreenShot](https://raw.github.com/JunhoAn0702/Simple-Calculator/blob/master/SimpleCalculator.png)
+![ScreenShot](https://raw.github.com/JunhoAn0702/Simple-Calculator/master/SimpleCalculator.png)
 
 ## I. Introduction
 This app is designed loosely around Super Nintendo's "StarFox" to look like 3D game. The purpose of this game is to shoot down the enemy’s spaceship with the missile. We have a background music, “He’s pirate” controlled by the user. 

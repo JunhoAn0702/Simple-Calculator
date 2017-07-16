@@ -4,11 +4,10 @@ This game is built with Java GUI.
 ![ScreenShot](https://raw.github.com/JunhoAn0702/Simple-Calculator/master/SimpleCalculator.png)
 
 ## I. Introduction
-This app is designed loosely around Super Nintendo's "StarFox" to look like 3D game. The purpose of this game is to shoot down the enemy’s spaceship with the missile. We have a background music, “He’s pirate” controlled by the user. 
+This app is designed with MVC design pattern to conduct simple math calculation by clicking the buttons, and the result should be displayed in the Output Display Panel. Whenever a math calculation is successfully conducted, that is, the "=" button is clicked, the client will send a message to the server, which will record the successful math equation, such as "3+5+8=16".
 
 ## II. Startup
-Make sure the accelerometer is plugged in, and the ComPort is correct. Open the app.
-First, his the button "SerialRead." Wait a moment to make sure this is completed. The command window in Matlab will make you aware if this is completed as well. Next, hit "calibrate" and follow the instructions. When you calibrate, the Z-direction should be pointing up because we are mainly using two directions X, and Y. Y-direction is to control the movement of out spaceship. X-direction is to shoot when the user snaps his/her wrist.  Once calibrated, you can hit start. This starts the game. After killing the enemy, you can restart, or to finish you can hit "stop," and then "CloseSerial." Even when you are in the process of killing enemy, you can hit “stop”. We purposely made the start and stop button simultaneously workable in both situations when you first start the game and when you restart the game in order to provide the user friendly interface.
+
 
 ## III. Controls
 Hold the accelerometer in your hand with the Y-axis pointing to the left or right. In order to go left or right, rotate your wrist. In order to fire at the enemy spaceship, snap your wrist. We set the threshold value in X-direction in order to detect the snap.

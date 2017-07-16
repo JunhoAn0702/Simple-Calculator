@@ -1,22 +1,24 @@
-# My Finance With Roommates
-This is for CS338 GUI Project
+# 3D-Shooting-Game
+This game is built with Matlab GUI.
 
-# My Finance with Roommates
+![ScreenShot](https://raw.github.com/JunhoAn0702/3D-Shooting-Game/master/Simulation/Simulation.png)
 
-The GUI application, “My Finance with Roommates”, provides a way of keeping track of your daily expenses and other expenses 
-with your roommates. In the initial screen of application, the user can either create a new expense or load a saved expense 
-file. The user can analyze the monthly expense in various types of charts, and each chart has two types for 
-your individual expense and group expense with your roommates. The user can also save/load the data. After all, this 
-application will help the users to understand what’s really going on with their money.  
-Blog URL: https://drexelui.wordpress.com/2016/12/02/my-finance-with-roommates/
-# Build instruction:
-1. Downalod or clone the project.
-2. In the build.xml directory, type “ant cleanall” in command prompt
-3. In the build.xml directory, type “ant build” in command prompt
-4. In the build.xml directory, type “ant main” in command prompt
-5. The program should be up.
+## I. Introduction
+This app is designed loosely around Super Nintendo's "StarFox" to look like 3D game. The purpose of this game is to shoot down the enemy’s spaceship with the missile. We have a background music, “He’s pirate” controlled by the user. 
 
-# Notes:
-1. I added a test file you can load “123”. You can type 123 for the file name to load in the load screen.
-2. You can also create one by clicking “New Expense Button”.
-3. Please only type number in the amount input field on Add/Edit expense screen. Other than that, all validations should be applied.
+## II. Startup
+Make sure the accelerometer is plugged in, and the ComPort is correct. Open the app.
+First, his the button "SerialRead." Wait a moment to make sure this is completed. The command window in Matlab will make you aware if this is completed as well. Next, hit "calibrate" and follow the instructions. When you calibrate, the Z-direction should be pointing up because we are mainly using two directions X, and Y. Y-direction is to control the movement of out spaceship. X-direction is to shoot when the user snaps his/her wrist.  Once calibrated, you can hit start. This starts the game. After killing the enemy, you can restart, or to finish you can hit "stop," and then "CloseSerial." Even when you are in the process of killing enemy, you can hit “stop”. We purposely made the start and stop button simultaneously workable in both situations when you first start the game and when you restart the game in order to provide the user friendly interface.
+
+## III. Controls
+Hold the accelerometer in your hand with the Y-axis pointing to the left or right. In order to go left or right, rotate your wrist. In order to fire at the enemy spaceship, snap your wrist. We set the threshold value in X-direction in order to detect the snap.
+
+## IV. Core Functionality
+The core functionality includes setting up the serial port, calibrating, starting and stopping of reading the sensor values, filtering, closing the serial port, and a game as visualization of the read values. Threshold crossing detection is used to fire the laser. If you snap your wrist, the change of accelerometer values in X-direction will be detected with the threshold value. In order to minimize the noise from reading the accelerometer values, we used many conditions with if statement with setting the threshold values. 
+
+## V. Advanced Functionality
+All of the colors of the GUI have been changed, as well as a background picture within the game itself. The spacecraft in the game look like 3D figures in a 2D animation, just like
+"StarFox" from Super Nintendo. The main figure is controlled with the accelerometer, while the enemy spaceship oscillates back and forth. The laser and explosion animation run on "for loops." There is also music, with a button to give the option to turn it on or off.
+
+## VI. Difficulty and limitation
+We tried to create different levels of game, however, with the simultaneously workable start and stop button, the level system wasn’t stable. Our goal was to create that every time the user restarts the game, the level goes up, which means that the enemy spaceship moves faster, but if the user press the stop button, the level goes back to 1. Currently, our main functions are all in the while loop when the stop button is not pressed. For the future, we are trying to create a slider that controls the value of velocity of enemy’s spaceship. 

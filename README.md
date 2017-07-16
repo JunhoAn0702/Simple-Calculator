@@ -1,5 +1,5 @@
-# 3D-Shooting-Game
-This game is built with Matlab GUI.
+# Simple-Calculator
+This game is built with Java GUI.
 
 ![ScreenShot](https://raw.github.com/JunhoAn0702/3D-Shooting-Game/master/Simulation/Simulation.png)
 
